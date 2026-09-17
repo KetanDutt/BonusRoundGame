@@ -45,7 +45,7 @@ public class RuntimeUi : MonoBehaviour
         _turbo = false;
         Tweens.TimeScale = 1f;
 
-        GameObject go = new GameObject("[RuntimeUi]");
+        GameObject go = new GameObject("[RuntimeUi]", typeof(RectTransform));
         go.transform.SetParent(App.Canvas.transform, false);
         Instance = go.AddComponent<RuntimeUi>();
         Instance.Build();

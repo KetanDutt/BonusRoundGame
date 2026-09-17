@@ -16,9 +16,9 @@ public static class SpriteFactory
     /// <summary>Solid rounded-rectangle sprite with 9-slice border (use Image.type = Sliced).</summary>
     public static Sprite RoundedRect()
     {
+        int b = 16; // corner radius in texels
         return GetOrCreate("roundrect", delegate (Color32[] px)
         {
-            int b = 16; // corner radius in texels
             for (int y = 0; y < TexSize; y++)
             {
                 for (int x = 0; x < TexSize; x++)
